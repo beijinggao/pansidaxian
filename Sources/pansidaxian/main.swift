@@ -9,4 +9,6 @@ func main(argc:[Any],argv:[Any]) -> Void {
     let _ = request.parseURL()
 }
 
+Banner()
+
 main(argc: [0], argv: [0])
