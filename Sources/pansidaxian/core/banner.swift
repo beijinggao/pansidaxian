@@ -1,36 +1,22 @@
-//
-//  banner.swift
-//  pansidaxian
-//
-//  Created by gaodong on 2018/7/18.
-//
-
-import Foundation
-
-
-public enum ReaderError: Error {
-    case resourceNotFound
-    case readFailed(Error)
-    case convertToStringFailed
-}
-
 func Banner(){
-    let bundle = Bundle()
-    let banner = "banner"
-    let type = "rtf"
-    let resourcePath = bundle.path(forResource: banner, ofType: type)
     
-    
-    //let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("banner.rtf")
+    let banner = """
+                     _________
+    ________ ______________  /____  __
+    ___  __ \\__  ___/_  __  / __  |/_/
+    __  /_/ /_(__  ) / /_/ /  __>  <
+    _  .___/ /____/  \\__,_/   /_/|_|
+    /_/
+    """
     
     print(banner)
 
-    do{
-        let data = try String(contentsOfFile: resourcePath!)
+    /*do{
+        let data = try String(contentsOfFile: "/Users/gao/work/todo/pansidaxian/Resources/banner.rtf")
         print(data)
     }catch{
         print(error.localizedDescription)
-    }
+    }*/
     
 }
 
