@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ChromiumEmbedded",
+        "repositoryURL": "https://github.com/gao8954/libcef.git",
+        "state": {
+          "branch": null,
+          "revision": "0456008a525e486f0b23fdddb81c4358513460f1",
+          "version": "1.0.2"
+        }
+      },
+      {
         "package": "COpenSSL",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-COpenSSL.git",
         "state": {
@@ -24,8 +33,8 @@
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-CURL.git",
         "state": {
           "branch": null,
-          "revision": "d81d96a74f43407a4b57a7c5335fd19515b50aeb",
-          "version": "3.0.6"
+          "revision": "08ba26c7b768e9e2096d1fe475e0cef733b98a75",
+          "version": "3.0.7"
         }
       },
       {

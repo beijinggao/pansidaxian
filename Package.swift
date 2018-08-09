@@ -13,7 +13,8 @@ let package = Package(
     ],*/
     dependencies: [
     	.package(url: "https://github.com/PerfectlySoft/Perfect-CURL.git", from: "3.0.6"),
-        .package(url: "https://github.com/PerfectlySoft/Perfect-XML.git", from: "3.1.3"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-XML.git", from: "3.1.3")
+        //.package(url: "https://github.com/gao8954/libcef.git",from:"1.0.2")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
