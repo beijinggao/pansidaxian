@@ -1,5 +1,6 @@
 //main
 
+import ChromiumEmbedded
 
 func main(argc:[Any],argv:[Any]) -> Void {
     print("************")

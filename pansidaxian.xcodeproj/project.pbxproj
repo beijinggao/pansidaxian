@@ -2952,7 +2952,12 @@
 		OBJ_742 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CEF_BINARY_ROOT = "$(SRCROOT)/External/cef_binary";
+				DEFINES_MODULE = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -2967,7 +2972,8 @@
 					"$(CEF_BINARY_ROOT)",
 				);
 				INFOPLIST_FILE = pansidaxian.xcodeproj/pansidaxian_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path $(CEF_BINARY_ROOT)/$(CONFIGURATION)";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-I/usr/local/Cellar/libxml2/2.9.7/include/libxml2",
@@ -2981,18 +2987,27 @@
 					"\"Chromium Embedded Framework\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libxml2/2.9.7/include/libxml2 -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-COpenSSL.git--4744624199947727386/COpenSSL/include/module.modulemap";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules/ChromiumEmbedded";
 				SWIFT_VERSION = 4.0;
 				TARGET_NAME = pansidaxian;
+				USE_HEADERMAP = YES;
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
 		OBJ_743 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CEF_BINARY_ROOT = "$(SRCROOT)/External/cef_binary";
+				DEFINES_MODULE = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -3007,7 +3022,8 @@
 					"$(CEF_BINARY_ROOT)",
 				);
 				INFOPLIST_FILE = pansidaxian.xcodeproj/pansidaxian_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path $(CEF_BINARY_ROOT)/$(CONFIGURATION)";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-I/usr/local/Cellar/libxml2/2.9.7/include/libxml2",
@@ -3021,11 +3037,15 @@
 					"\"Chromium Embedded Framework\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -I/usr/local/Cellar/libxml2/2.9.7/include/libxml2 -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/Perfect-COpenSSL.git--4744624199947727386/COpenSSL/include/module.modulemap";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules/ChromiumEmbedded";
 				SWIFT_VERSION = 4.0;
 				TARGET_NAME = pansidaxian;
+				USE_HEADERMAP = YES;
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
